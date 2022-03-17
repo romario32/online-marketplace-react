@@ -1,22 +1,23 @@
 import React from 'react'
 import Header from '../../components/managementPageComponents/Layout/Header';
 import Sidebar from '../../components/managementPageComponents/Layout/Sidebar';
-import Messages from '../../components/managementPageComponents/Messages/Messages';
+import Collections from '../../components/managementPageComponents/Collections/Collections';
 import Footer from '../../components/footerComponents/Footer';
 
-const MessagesScreen = () => {
+const CollectionScreen = () => {
   return (
     <>
         <Header/>
         <div className="flex mainSectionBlockHeight">
-            <Sidebar activeTab={5} />
-            <Messages/> 
+            <Sidebar activeTab={3} />
+            <Collections/> 
         </div> 
         <Footer/> 
     </>
   )
 }
 
-export default MessagesScreen
+export default CollectionScreen
+
 
  

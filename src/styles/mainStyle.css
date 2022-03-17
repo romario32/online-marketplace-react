@@ -11,6 +11,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+.mainSectionBlockHeight{
+  height: calc(100vh - 8em);
+ }
+
+.sectionBlockHeight{
+ height: calc(100vh - 10em);
+}
+
+.adsectionBlockHeight{
+  height: calc(100vh - 31.1em);
+ }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -49,8 +63,17 @@ code {
 max-height:34rem;
 }
 
+.sm\:cw-18rem{
+  width: 18rem;
+}
+
+
 .right-88 {
   right: 23rem;
+}
+
+.c-right-30p{
+right: 30%;
 }
 
 .right-106 {
@@ -102,29 +125,7 @@ left: 35px !important;;
   background-color: #f2f0f0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 /* Separator Stuff */
 .separator {
@@ -147,4 +148,27 @@ left: 35px !important;;
 .separator:not(:empty)::after {
   margin-left: .25em;
 }
+
+.textEditor{
+  border: #6c6c6c;
+  border-radius: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

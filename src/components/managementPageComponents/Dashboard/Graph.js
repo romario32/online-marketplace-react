@@ -112,12 +112,11 @@ export default function Graph() {
     window.myLine = new Chart(ctx, config);
   }, []);
   return (
-    <>
-      <div className="relative flex-col min-w-0 break-words w-full max-h-80  mb-6 rounded bg-blueGray-700">
+      <div className=" col-span-2 flex-col min-w-0 break-words w-full max-h-80  mb-6 rounded bg-blueGray-700">
         <div className="rounded-t mb-0 px-4 py-1 bg-transparent">
           <div className="flex flex-wrap items-center">
-            <div className="relative w-full max-w-full flex-grow flex-1">
-              <h2 className="text-center sm:text-left mb-1 text-lg font-bold">
+            <div className="block w-full max-w-full flex-grow flex-1">
+              <h2 className="text-center sm:text-left py-5 text-lg font-bold">
                 Account Activity Overview
                 <span className="block text-xs text-slate-500">Product Views & Orders Statistics</span>
               </h2>
@@ -126,11 +125,10 @@ export default function Graph() {
         </div>
         <div className="flex-auto">
           {/* Chart */}
-          <div className="relative overflow-x-scroll h-36 w-auto sm:h-60 md:h-72 lg:h-80">
+          <div className="block overflow-x-scroll h-36 w-auto sm:h-60 md:h-72 lg:h-80">
             <canvas id="line-chart"></canvas>
           </div>
         </div>
       </div>
-    </>
   );
 }
