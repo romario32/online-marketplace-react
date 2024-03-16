@@ -13,6 +13,9 @@ import SearchBar from '../searchBar/SearchBar';
 import DesktopNavbar from './DesktopNavbar'; 
 import Collection from '../collection/Collection';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+
+
 const deals = [
   {
     name: 'Help Center',
@@ -41,6 +44,7 @@ const recentPosts = [
 ]
 
 export default function NavbarComponent() {
+  const [navOpen, setNavOpen] = useState(false);
   return ( 
     <>
     {/* Header Navigation With Resposive Mobile  Nav and Imported Desktop Nav */}
@@ -63,10 +67,10 @@ export default function NavbarComponent() {
               </div> 
               <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
                 <span className="sr-only">Open menu</span>
-                <MenuAlt3Icon className="h-6 w-6" aria-hidden="true" />
+                <MenuAlt3Icon className="h-6 w-6" aria-hidden="true" onClick={()=>setNavOpen((prevNavOpen)=>!prevNavOpen)}/>
               </Popover.Button>
             </div> 
-            {/* Navbar Project */}
+            {/* Desktop Navbar */}
             <Popover.Group as="nav" className="items-center hidden md:flex justify-end space-x-6 flex-auto">
                 <DesktopNavbar Deals={deals} RecentPosts={recentPosts}/>
             </Popover.Group> 
@@ -81,7 +85,7 @@ export default function NavbarComponent() {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+          <Popover.Panel focus className="absolute zs-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
@@ -95,7 +99,7 @@ export default function NavbarComponent() {
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span className="sr-only">Close menu</span>
-                      <XIcon className="h-6 w-6" aria-hidden="true" />
+                      <XIcon className="h-6 w-6" aria-hidden="true" onClick={()=>setNavOpen((prevNavOpen)=>!prevNavOpen)}/>
                     </Popover.Button>
                   </div>
                 </div>
@@ -141,7 +145,7 @@ export default function NavbarComponent() {
         </Transition>
         
       </Popover>
-      <div className="sticky top-0 search-container md:hidden z-20 w-full max-w-7xl mx-auto px-4 ">
+      <div className={`sticky top-0 search-container md:hidden z-20 w-full max-w-7xl mx-auto px-4  ${navOpen?"invisible":"visible"}`}>
         <SearchBar categoryDropdownPosition={"right-7"} /> 
       </div>
     </>

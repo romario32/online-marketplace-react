@@ -26,15 +26,15 @@ export default function UserLogin(){
 
           <div className="w-full flex justify-center">
             <div className="absolute z-10 top-16 left-0">
-              <p className="font-bold mx-5 ">
-                  <div className="block">
+              {/* <p className="font-bold mx-5 "> */}
+                  <div className="block font-bold mx-5">
                     <span className="block rounded-t-lg m-0 pl-4 w-fit text-5xl lg:text-6xl text-amber-100 bg-blue-700">Buy,</span>
                     <span className="block m-0 px-4 w-fit text-5xl lg:text-6xl text-amber-100 bg-blue-700">Sell</span>
                     <span className="block rounded-b-lg rounded-r-lg m-0 p-1 w-fit text-5xl lg:text-6xl text-amber-100 bg-blue-700">& Rent</span>  
                     <span className="block text-blue-700 text-5xl lg:text-6xl">Quickly</span>
                     <span className="block text-blue-700 text-6xl lg:text-7xl">and Easily</span>
                   </div>  
-              </p>
+              {/* </p> */}
             </div>
             <LazyLoadImage
                 src={`images/illustrations/${Math.round(isNum)}.png`}

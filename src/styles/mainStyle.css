@@ -17,7 +17,7 @@ body {
   height: calc(100vh - 8em);
  }
 
-.sectionBlockHeight{
+.menuSectionBlockHeight{
  height: calc(100vh - 10em);
 }
 
@@ -114,11 +114,11 @@ a{
 }
 
 .slick-prev{
-left: 35px !important;;
+left: 32px !important;;
 }
 
 .slick-next {
-  right: 35px !important;;
+  right: 36px !important;;
 }
 
 .bg-colour-info-column{
@@ -155,7 +155,14 @@ left: 35px !important;;
 }
 
 
+.profileImage{
+  right: calc(50% - 80px);
+}
 
+.profileInformation{
+  clip-path: polygon(53% 0, 100% 0, 100% 100%, 0% 100%);
+  width: calc(50% + 130px);
+}
 
 
 

@@ -97,9 +97,9 @@ export default function CardSlider(){
     };
   return (
     <>
-        <div className="mx-auto py-6 px-4 sm:px-6 max-w-7xl lg:px-8">
-        <a href="#"><h2 className="text-xl text-gray-900 w-fit"> <FontAwesomeIcon icon={solid('shirt')} className="h-5 px-2 "/> <span>Clothes</span> | <span className="font-light text-lg">See More <FontAwesomeIcon icon={solid('arrow-right-long')} className="h-4 px-2 "/> </span> </h2></a>
-            <Slider {...settings} className="max-w-7xl mx-auto px-4 my-5">
+        <div className="mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <a href="#"><h2 className="text-xl text-gray-900 w-fit"> <FontAwesomeIcon icon={solid('shirt')} className="h-5 px-2 "/> <span>Clothes</span> | <span className="font-light text-base">See More <FontAwesomeIcon icon={solid('arrow-right-long')} className="h-4 px-2 "/> </span> </h2></a>
+            <Slider {...settings} className=" mx-auto px-4 my-5">
                 {products.map((product) => (
                    <ListingCard product={product} key={product.id}/>
                 ))}
